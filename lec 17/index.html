@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Selectors</title>
     <style>
-        div{
+        /* div{
             background-color: red;
-        }
+        } */
 
         /* Class Selectors */
         .blue{
@@ -24,13 +24,43 @@
             color: yellow;
             background-color: brown;
         }
+
+
+        /* Descendant Selector */
+        div  p {
+            color: purple;
+            background-color: pink;
+        }
+
+        /* Universal Selector */
+        * {
+            margin:0;
+            padding:0;
+        }
+
+        /* Pseudo Selector */
+        a:active{
+            color: green;
+        }
+
     </style>
 </head>
 <body>
     <div>I am div
-        <p>i am para of div</p>
+        
     </div>
+
+    <div>
+    <p>I am a direct child.</p>
+    <section>
+        <p>I am a grandchild.</p>
+    </section>
+    </div>
+
     <div class="blue">i am newone</div>
     <div id="green">i am newdiv</div>
+    <div>
+        <a href="https://www.google.com">Google me</a>
+    </div>
 </body>
 </html>
